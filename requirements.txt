@@ -1,6 +1,5 @@
-streamlit
-pandas
-plotly
-sqlite3
-statsmodels
-streamlit-aggrid
+streamlit==1.26.0
+pandas==2.1.0
+plotly==5.15.0
+statsmodels==0.18.2
+streamlit-aggrid==0.4.2

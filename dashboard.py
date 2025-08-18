@@ -1,9 +1,8 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 import plotly.express as px
 import warnings 
-import pathlib
+import pathlib 
 import sqlite3
 
 warnings.filterwarnings("ignore")
@@ -111,10 +110,10 @@ item_variant = df.melt(
 
 )
 
-item_name["product_no"]    = item_name["in"].str.extract("(\d+)")
-item_price["product_no"]   = item_price["ip"].str.extract("(\d+)")
-item_quantity["product_no"]= item_quantity["iq"].str.extract("(\d+)")
-item_variant["product_no"] = item_variant["iv"].str.extract("(\d+)")
+item_name["product_no"]    = item_name["in"].str.extract(r"(\d+)")
+item_price["product_no"]   = item_price["ip"].str.extract(r"(\d+)")
+item_quantity["product_no"]= item_quantity["iq"].str.extract(r"(\d+)")
+item_variant["product_no"] = item_variant["iv"].str.extract(r"(\d+)")
 
 
 item_name    = item_name.drop(columns=["in"])

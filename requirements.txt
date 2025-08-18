@@ -1,0 +1,6 @@
+streamlit
+pandas
+plotly
+sqlite3
+statsmodels
+streamlit-aggrid

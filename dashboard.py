@@ -235,7 +235,7 @@ sell = dndf.groupby(["pincode", "Product_name"]).agg({
     "Quantity":"sum",
     "Revenue":"sum"
 }).reset_index().sort_values(by = "Quantity", ascending = False)
-geo = pd.read_csv(r"C:\Python Lab Work\Work\Project5(amintiri_report)\pincode_with_lat-long.csv",low_memory=False)
+geo = pd.read_csv(r"pincode_with_lat-long.csv",low_memory=False)
 geo = geo.rename(columns = {"Pincode":"pincode"})
 geoloc = geo[["pincode","Latitude", "Longitude"]]
 sell = sell.merge(geoloc, on="pincode", how = "left")

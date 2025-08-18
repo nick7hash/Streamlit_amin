@@ -10,3 +10,69 @@ h1{
     background-color: #F5F5F7 ;
     padding: 5vh;
 }
+
+.infocard {
+    background-color: #0a1a2f; 
+    color: #ffffff; 
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    max-width: 250px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.infocard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.infocard .author {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #63b3ed; 
+}
+
+.infocard .authorname {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff;
+}
+
+.infocard .authoragency {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 5px;
+    color: #a0aec0; 
+}
+.summary {
+    background-color: #f0f0f0;  
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px;
+}
+.hero-section {
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.hero-title {
+    color: #1f1f1f; 
+    font-family: 'Arial', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+    border-bottom: 2px solid #888888; 
+    display: inline-block; 
+    padding-bottom: 5px;
+}

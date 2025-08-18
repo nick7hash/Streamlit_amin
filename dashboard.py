@@ -52,7 +52,7 @@ st.markdown('''| Section      | Details                                         
 
 
 st.markdown("***")
-st.header("Report Overview")
+st.header("Dashboard Overview")
 st.write('''
 
 This report presents an analysis of data collected from the Amintiri sales database for the selected period.
@@ -239,7 +239,7 @@ geo = pd.read_csv(r"pincode_with_lat-long.csv",low_memory=False)
 geo = geo.rename(columns = {"Pincode":"pincode"})
 geoloc = geo[["pincode","Latitude", "Longitude"]]
 sell = sell.merge(geoloc, on="pincode", how = "left")
-fig = px.scatter_map(sell, lat = "Latitude", lon = "Longitude", size = "Revenue", color = "Quantity", hover_name = "pincode", hover_data = ["Product_name", "Quantity", "Revenue"], center = {"lat":12.9716, "lon":77.5946}, zoom = 10, color_continuous_scale=px.colors.sequential.Plasma )
+fig = px.scatter_map(sell, lat = "Latitude", lon = "Longitude", size = "Revenue", color = "Quantity", hover_name = "pincode", hover_data = ["Product_name", "Quantity", "Revenue"], center = {"lat":12.9716, "lon":77.5946}, zoom = 10, color_continuous_scale=px.colors.sequential.Plasma_r )
 fig.update_layout(
     height = 500,
     width = 300,
@@ -674,3 +674,7 @@ fig.update_layout(height = 900, showlegend = True)
 st.plotly_chart(fig, use_container_width= False)
 st.markdown('''<div class = "summary"><p>From the seasonal decomposition, we observe that the seasonal component shows an upward trend between January and May, after which sales exhibit a slight downward or stable pattern. The noise component highlights sharp spikes in sales around specific dates such as 13 Feb, 10 May, 6 June, and 15 June, which align with festivals or weekends, indicating short-term demand surges.
 This suggests that while the overall sales trend is steady with mild seasonality, special occasions and events act as key demand boosters, creating temporary spikes that businesses can strategically target with promotions.</p></div>''',unsafe_allow_html= True)
+st.markdown("***")
+
+st.header("Conclusion -")
+st.markdown('''<div class = "conclusion"><p>The analysis of the dataset provides a clear understanding of the key trends, regional performance, and product-wise contributions. High-performing pincodes and products have been identified, highlighting areas of strong customer engagement and revenue generation. These insights can guide strategic decisions, optimize resource allocation, and inform targeted marketing efforts. Overall, the findings offer actionable recommendations to improve business performance and support data-driven decision-making.</p></div>''',unsafe_allow_html= True)

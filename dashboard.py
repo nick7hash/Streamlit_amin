@@ -163,7 +163,9 @@ with st.sidebar:
     .stDateInput input {
         color: black !important;
     }
-
+    section[data-testid="stSidebar"] {
+    width: 305px !important;   /* default ~280px, increase here */
+    }
     /* Month & Year navigation text (top of calendar) */
     div[data-baseweb="calendar"] button {
         color: white !important;

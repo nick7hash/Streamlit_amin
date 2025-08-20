@@ -155,7 +155,24 @@ with st.sidebar:
         <h4 style="color: white; margin: 0;">Date Selection</h4>
     </div>
     """, unsafe_allow_html=True)
-    
+
+    st.markdown(
+    """
+    <style>
+    /* Input box */
+    .stDateInput input {
+        color: black !important;
+    }
+
+    /* Month & Year navigation text (top of calendar) */
+    div[data-baseweb="calendar"] button {
+        color: white !important;
+    }
+
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
     # Your original date input
     start_date, end_date = st.date_input(
         "Select Date Range",
